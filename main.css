@@ -27,35 +27,41 @@ h1 {
 }
 
 .button {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   border: 3px solid black;
-  height: 4.5rem;
-  width: 4.5rem;
-  border-radius: 50%;
-  text-align: center;
+  /* height: 4.5rem;
+  width: 4.5rem; */
+  /* border-radius: 50%; */
   margin: auto;
-  background-color: white;
-  cursor: pointer
+  cursor: pointer;
 }
 
 #left-arrow,
 #right-arrow {
-  font-size: 3rem;
+  /* background-color: white; */
+  /* text-align: center; */
+  /* font-family: 'Comic Sans MS'; */
+  /* font-size: 3rem; */
+}
+
+#left-arrow img,
+#right-arrow img {
+  width: 80px;
 }
 
 #image-container {
   display: flex;
   justify-content: center;
   width: 75%;
+  
 }
 
 #image {
+  transition: background-color 0.6s ease;
   max-height: 80vh;
   max-width: 100%;
 }
 
 .fade {
-
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
@@ -70,11 +76,11 @@ h1 {
 .circle {
   width: 25px;
   height: 25px;
-  background-color: grey;
+  background-color: transparent;
   border-radius: 50%;
   margin: 1rem;
   cursor: pointer;
-  border: 1px solid white;
+  border: 2px solid white;
   transition: background-color 0.6s ease;
 }
 
