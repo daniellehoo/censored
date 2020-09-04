@@ -51,5 +51,5 @@ const handleRightClick = () => {
 };
 
 window.onload = function () {
-  init(['ump.jpg', 'mel.jpg', 'ivanka.jpg', 'dtj.jpg', 'eric.jpg']);
+  init(['ump.jpg', 'mel.jpg', 'ivanka.jpg', 'dtj.jpg', 'eric.jpg', 'tiff.jpg']);
 };
