@@ -13,8 +13,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 3rem);
+    height: 100vh;
+    /* height: calc(100vh - 3rem); */
     justify-content: space-around;
+    background-color: black;
 }
 
 .button {
@@ -25,6 +27,7 @@ h1 {
     text-align: center;
     margin: auto;
     align-items: center;
+    background-color: white;
 }
 
 #left-arrow, #right-arrow {
@@ -38,30 +41,6 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid black;
-    height: 50vh;
+    height: 75vh;
     width: 800px;
-}
-
-.melania {
-    position: absolute;
-    background-image: url('./media/mel.jpg');    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-    width: 250px;
-    bottom: 0;
-    left: 0;
-}
-
-.ivanka {
-    position: absolute;
-    background-image: url('./media/ivanka.jpg');    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-    width: 250px;
-    top: 0;
-    right: 0;
 }
