@@ -8,3 +8,8 @@
 sources:
 drag and drop elements:
 https://www.kirupa.com/html5/drag.htm
+
+start local web server:
+https://medium.com/@svinkle/start-a-local-live-reload-web-server-with-one-command-72f99bc6e855
+
+terminal command: serve

@@ -11,20 +11,35 @@ h1 {
 
 .container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 3rem);
+    justify-content: space-around;
 }
 
-.trump {
+.button {
+    border: 3pt solid black;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+#left-arrow, #right-arrow {
+    font-size: 3rem;
+}
+
+#image-container {
     display: flex;
     background-image: url('./media/ump.jpg');    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 1px solid black;
     height: 50vh;
-    width: 75vw;
+    width: 800px;
 }
 
 .melania {
