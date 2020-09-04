@@ -1,5 +1,5 @@
 let src = './media/';
-let imageContainer = document.getElementById('image-container');
+let image = document.getElementById('image');
 let leftButton = document.getElementById('left-arrow');
 let rightButton = document.getElementById('right-arrow');
 let imageArr = [];
@@ -8,7 +8,7 @@ let state = {
   photoId: 0,
 };
 
-const populateCarousel = (args) => {
+const init = (args) => {
   args.map((item, index) => {
     let circle = document.createElement('div');
     circle.id = index;
@@ -16,6 +16,9 @@ const populateCarousel = (args) => {
     circles.append(circle);
     imageArr.push(item);
   });
+  leftButton.addEventListener('click', handleLeftClick);
+  rightButton.addEventListener('click', handleRightClick);
+  toggleCircles();
 };
 
 const toggleCircles = () => {
@@ -28,8 +31,7 @@ const toggleCircles = () => {
         : circleArr[index].classList.remove('active');
       item.addEventListener('click', () => {
         state.photoId = index;
-        imageContainer.style.backgroundImage =
-          'url(' + src + imageArr[state.photoId] + ')';
+        image.src = src + imageArr[state.photoId];
         toggleCircles();
       });
     });
@@ -38,21 +40,16 @@ const toggleCircles = () => {
 
 const handleLeftClick = () => {
   state.photoId === 0 ? (state.photoId = imageArr.length - 1) : state.photoId--;
-  imageContainer.style.backgroundImage =
-    'url(' + src + imageArr[state.photoId] + ')';
+  image.src = src + imageArr[state.photoId];
   toggleCircles();
 };
 
 const handleRightClick = () => {
   state.photoId < imageArr.length - 1 ? state.photoId++ : (state.photoId = 0);
-  imageContainer.style.backgroundImage =
-    'url(' + src + imageArr[state.photoId] + ')';
+  image.src = src + imageArr[state.photoId];
   toggleCircles();
 };
 
 window.onload = function () {
-  populateCarousel(['ump.jpg', 'mel.jpg', 'ivanka.jpg', 'dtj.jpg']);
-  toggleCircles();
-  leftButton.addEventListener('click', handleLeftClick);
-  rightButton.addEventListener('click', handleRightClick);
+  init(['ump.jpg', 'mel.jpg', 'ivanka.jpg', 'dtj.jpg']);
 };
